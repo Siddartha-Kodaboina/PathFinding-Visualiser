@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles_new.css"/>
+</head>
+<body class="body">
+        <div class="captain">
+            <div class="top">
+                <div class = "headPart">
+                    <img class ="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQa90lC2Y2K9JbH4ovcboy0zI5F-Hbs6lXDog&usqp=CAU">
+                    <div class="logo-text" >Pathfinding Visualiser</div>
+                </div>
+                <div class = "headPart">
+                    <div class="Box" style="background-color: rgba(211, 88, 17, 0.986)"></div>
+                    <div class="Head-text" >Start Node</div>
+                </div>
+                <div class = "headPart">
+                    <div class="Box" style="background-color: rgba(0, 4, 255, 0.753)"></div>
+                    <div class="Head-text" >Target Node</div>
+                </div>
+                <div class = "headPart">
+                    <div class="Box" style="background-color: rgb(8, 155, 32)"></div>
+                    <div class="Head-text" >Unvisited Node</div>
+                </div>
+                <div class = "headPart">
+                    <div class="Box" style="background-color: rgb(3, 141, 253)"></div>
+                    <div class="Head-text" >Visited Node</div>
+                </div>
+                <div class = "headPart">
+                    <div class="Box" style="background-color:rgb(6, 38, 65)"></div>
+                    <div class="Head-text" >Wall Node</div>
+                </div>
+                <div class = "headPart">
+                    <div class="Box" style="background-color: rgba(235, 15, 117, 0.842)"></div>
+                    <div class="Head-text" >Minimum-cost-path Node</div>
+                </div>
+            </div>
+            <div class="middle"> 
+                <p class="mid-text">
+                    
+                    <ul><li>
+                    <a class="but">Create</a>
+                        <ul>
+                            <li><a id="weightedNodes">Weighted Grid</a></li>
+                            <li><a id="unWeightedNodes">Unweighted Grid</a></li>
+                        </ul>
+                    
+                    </li></ul>
+                </p>
+                <p class="mid-text">
+                     <button class="but" id="changer">DOIT</button> 
+                </p>
+                <p class="mid-text">
+                     <ul><li>
+                        <a class="but">Clear</a>
+                            <ul>
+                                <li><a id="clearEverythingExceptWalls">Clear Except Walls</a></li>
+                                <li><a id="clearEverything">Clear Everything</a></li>
+                            </ul>
+                        
+                        </li></ul>
+                        
+                </p>
+                <p class="mid-text">
+                    
+                    <ul><li>
+                    <a class="but">Walls</a>
+                        <ul>
+                            <li><a id="recMaze">Recursive Walls</a></li>
+                            <li><a id="randMaze">Random Walls</a></li>
+                        </ul>
+                    
+                    </li></ul>
+                    
+                </p>
+            </div>
+            <div class="rest">
+                <table id="board" class="board" > </table>
+            </div>
+        </div>
+    <script src="./scripts/sa.js"></script>
+    <script>
+        let height=window.screen.height;
+        let width=window.screen.width;
+        console.log("width height",width,height);
+        let cellheight=(height-(30/100)*height)/20;
+        let cellwidth=(width-(10/100)*width)/50;
+        console.log("width height",cellheight,cellwidth);
+        //document.getElementsByClassName("cell").style.height=parseInt(cellheight)+"px";
+        //document.getElementsByClassName("cell").style.width=parseInt(cellwidth)+"px";
+    </script>
+</body>
+</html>
